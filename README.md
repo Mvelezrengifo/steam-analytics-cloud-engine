@@ -1,4 +1,6 @@
 # Steam Data Lakehouse & Dashboard 🚀
+Architecture:
+Steam Dataset → BigQuery (Lakehouse Layers) → Django Backend → Web Dashboard
 
 Proyecto de Ingeniería de Datos y Desarrollo Web que integra un flujo de datos desde un Lakehouse en Google Cloud (BigQuery) hasta un Dashboard dinámico en Django.
 
