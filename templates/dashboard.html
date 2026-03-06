@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Steam Analytics - Mauro</title>
+    <style>
+        body { font-family: Arial; background: #1b2838; color: white; text-align: center; }
+        table { margin: 0 auto; border-collapse: collapse; width: 80%; background: #2a475e; }
+        th, td { padding: 15px; border: 1px solid #66c0f4; }
+        th { background: #171a21; }
+        .header { padding: 20px; background: #171a21; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 Steam Big Data Dashboard</h1>
+        <p>Analizando 1,000,000 de registros en tiempo real desde Google BigQuery</p>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Game ID</th>
+                <th>Total de Reseñas</th>
+                <th>Popularidad (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for juego in juegos %}
+            <tr>
+                <td>{{ juego.game_id }}</td>
+                <td>{{ juego.total_reviews }}</td>
+                <td>{{ juego.score }}%</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
