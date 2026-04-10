@@ -1,138 +1,51 @@
-Steam Analytics Cloud Engine 🚀
+🚀 Steam Analytics Cloud Engine
+Steam Analytics Cloud Engine es una plataforma de ingeniería de datos + desarrollo web que integra una arquitectura Lakehouse en Google Cloud con un backend en Django para análisis interactivos en tiempo real.
 
-Steam Analytics Cloud Engine is a Data Engineering and Web Development project that integrates a Lakehouse data architecture in Google Cloud with a Django backend dashboard for interactive analytics.
+🧩 Arquitectura
+Data Layer: BigQuery con patrón Medallion (Bronce → Plata → Oro).
 
-The project demonstrates how large-scale datasets can be processed in a modern cloud data stack and then exposed through a web application for real-time insights.
+Backend: Django (Python) con conexión segura a BigQuery.
 
-Architecture
-Steam Dataset
-     │
-     ▼
-BigQuery (Lakehouse Layers)
-Bronze → Silver → Gold
-     │
-     ▼
-Django Backend (Python)
-     │
-     ▼
-Web Dashboard / Analytics Panel
+Dashboard Web: panel interactivo para métricas de popularidad y reseñas de Steam.
 
-This architecture follows the Medallion Lakehouse pattern, ensuring:
+Patrón Medallion Lakehouse
+Bronce → ingesta de datos sin procesar (Steam datasets).
 
-Data reliability
+Plata → limpieza, normalización y transformación.
 
-Layered transformations
+Oro → datasets agregados optimizados para análisis y visualización.
 
-Scalable analytics pipelines
+⚡ Tecnologías
+Backend: Python, Django, Django Templates
 
-Technologies
-Backend
+Data Engineering: SQL, ETL Pipelines, Lakehouse Architecture
 
-Python
+Cloud: Google Cloud, BigQuery, cuentas de servicio seguras
 
-Django
+Versionado: Git, GitHub
 
-Django Templates
+📊 Funcionalidades
+Conexión en tiempo real entre Django y BigQuery.
 
-Data Engineering
+Autenticación segura con cuentas de servicio.
 
-SQL
+Visualización de métricas de popularidad y reseñas de Steam.
 
-ETL Pipelines
+Estructura escalable y profesional para proyectos de data analytics.
 
-Medallion Architecture
+🔮 Mejoras Futuras
+Endpoints REST con Django REST Framework.
 
-Cloud
+Orquestación de pipelines con Airflow.
 
-Google Cloud Platform
+Ingesta de datos en streaming.
 
-BigQuery
+Paneles avanzados de análisis y visualización.
 
-Service Accounts Authentication
+👤 Autor
+Mauricio Vélez Rengifo  
+Ingeniero de Datos | Desarrollador Backend
 
-Other Tools
+GitHub: Mvelezrengifo
 
-Git
-
-GitHub
-
-Data Visualization
-
-Features
-
-Real-time connection between Django and BigQuery
-
-Secure authentication using Google Cloud Service Accounts
-
-Professional and scalable project structure
-
-Data pipeline designed with Lakehouse principles
-
-Visualization of Steam popularity and review metrics
-
-Data Pipeline
-
-The dataset is processed using a Lakehouse architecture:
-
-Bronze Layer
-
-Raw data ingestion from the Steam dataset.
-
-Silver Layer
-
-Data cleaning, normalization, and transformation.
-
-Gold Layer
-
-Aggregated datasets optimized for analytics and dashboard queries.
-
-Project Structure
-steam-analytics-cloud-engine
-│
-├── dashboard
-│   ├── templates
-│   ├── views.py
-│   ├── models.py
-│
-├── steam_project
-│   ├── settings.py
-│   ├── urls.py
-│
-├── services
-│   ├── bigquery_client.py
-│
-├── requirements.txt
-├── README.md
-Example Use Case
-
-The platform allows analysis of:
-
-Most popular Steam games
-
-Review trends
-
-Player engagement
-
-Market trends in gaming
-
-Future Improvements
-
-API endpoints with Django REST Framework
-
-Data orchestration with Airflow
-
-Real-time streaming ingestion
-
-Advanced analytics dashboards
-
-Author
-
-Mauricio Velez Rengifo
-
-Data Engineer | Backend Developer
-
-GitHub
-https://github.com/Mvelezrengifo
-
-LinkedIn
-https://linkedin.com/in/mauricio-velez-5162a7152
+LinkedIn: Mauricio Vélez
